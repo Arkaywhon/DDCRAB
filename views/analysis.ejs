@@ -5,25 +5,27 @@
     <title>DDCRAB</title>
     <link rel = "stylesheet" type = "text/css" href = "../assets/styles.css">
 </head>
-    <div class="analysisTitle">
-        
-        <h1> Analysis </h1>
-        <h2> How you allocate your money</h2>
     
-        <script>
-        var total = <%=bills.phone%> + <%=bills.rent%> + <%=bills.school%> + 
-                    <%=bills.electric%> + <%=bills.water%> + <%=bills.savings%>;
-
-        </script>
-        <h2> <%=total%></h2>
-    </div>
 
 <body>
 
-    
+    <div class="analysisTitle">
+        <h1> Analysis </h1>
+        <h2> How  you allocate your money </h2>
+        <h2> The total sum of the bills and savings is <span id="bill-total"></span></h2>
 
+        <script type="text/javascript">
+            var total = <%=bills.phone%> + <%=bills.rent%> + <%=bills.school%> + 
+                        <%=bills.electric%> + <%=bills.water%> + <%=bills.savings%>;
+                document.getElementById("bill-total").innerHTML = total;
+            console.log(result);
+        </script>
+
+    </div>
+    
+    <div class ="form-label-container">
     <div class ="pieChart">
-        <div id="piechart"></div>
+        <div id="piechart" align='center'></div>
 
             <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
@@ -44,15 +46,16 @@
                 ['Savings', <%=bills.savings%>]
                 ]);
 
-  // Optional; add a title and set the width and height of the chart
-  var options = {'title':'Monthly Spendings', 'width':600, 'height':500};
+                // Optional; add a title and set the width and height of the chart
+                var options = {'title':'Monthly Spendings', 'width':600, 'height':500, is3D: true};
 
-  // Display the chart inside the <div> element with id="piechart"
-  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-  chart.draw(data, options);
-}
+                // Display the chart inside the <div> element with id="piechart"
+                var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  
+                chart.draw(data, options);
+                }
             </script>
+        </div>
     </div>
-    
 </body>
 </html>
