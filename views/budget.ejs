@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="icon" href="money.png">
+    <link rel="icon" href="/assets/money.png" type='image/x-icon/' >
     <title>DDCRAB</title>
     <link rel = "stylesheet" type = "text/css" href = "../assets/styles.css">
 </head>
@@ -11,23 +11,29 @@
         
         <h1>Calculate your Finances </h1>
         <h2> Fill out the following fields:</h2>
-        
+        <div class="form-label-container">
         <form action="/budget" method="POST">
             <label for="phone">Phone Bill</label>
             <input type="text" name="phone" value="">
+            <br>
             <label for="rent">Rent</label>
             <input type="text" name="rent" value="">
+            <br>
             <label for="school">School Fees</label>
             <input type="text" name="school" value="">
+            <br>
             <label for="electric">Electric Bill</label>
             <input type="text" name="electric" value="">
+            <br>
             <label for="water">Water Bill</label>
             <input type="text" name="water" value="">
+            <br>
             <label for="savings">Savings</label>
             <input type="text" name="savings" value="">
+            <br>
             <input type="submit" value="Submit form">
         </form>
-        
+        </div>
     </div>
     
 </body>
