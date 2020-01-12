@@ -1,17 +1,17 @@
 h1{
     color: #404040;
-    font-size: 40px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    letter-spacing: 1.5px;
+    font-size: 37px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
     text-align: center;
     line-height: 150px;
 }
 
 h2{
     color: purple;
-    font-family: "Times New Roman", Times, serif;
+    font-family: 'Ubuntu', sans-serif;
     text-align: center;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     font-size: 20px;
     line-height: 30px;
 }
@@ -28,6 +28,17 @@ body{
 
 .form-label-container {
   text-align: center;
+  line-height: 30px;
+  
+}
+
+form {
+  border: 1px solid black;
+  display: inline-block;
+  text-align: center;    
+  margin-left: 25%;
+  margin-right: 25%;
+  width: 25%;
 }
 
 .button {
@@ -69,6 +80,8 @@ body{
     right: 0;
   }
 
-p{
+  p{
+    
+    text-align: center;   
     font-size: 40px;
-}
+  }
